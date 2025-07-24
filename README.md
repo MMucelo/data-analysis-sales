@@ -2,7 +2,7 @@
 
 > *Projeto de Ciência de Dados | Python, Pandas, Matplotlib*
 
-Este repositório contém a **análise exploratória completa (EDA)** de um conjunto de dados fictícios de vendas, com o objetivo de compreender o comportamento comercial, identificar padrões, tendências e insights acionáveis e úteis para apoiar decisões estratégicas de negócio. Os dados simulam operações de uma empresa distribuidora localizada em Moçambique e países vizinhos.
+Este repositório contém a **análise exploratória completa (EDA)** de um conjunto de dados fictícios de vendas, com o objetivo de compreender o comportamento comercial, identificar padrões, tendências e insights acionáveis e úteis para apoiar decisões estratégicas de negócio. Os dados simulam operações de uma empresa distribuidora localizada em Moçambique e nos países vizinhos.
 
 ---
 
