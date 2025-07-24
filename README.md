@@ -1,16 +1,18 @@
 # 📊 Projecto 01: Análise Exploratória de Dados de Vendas
 
-> *Projeto de Ciência de Dados | Python, Pandas, Matplotlib, Seaborn*
+> *Projeto de Ciência de Dados | Python, Pandas, Matplotlib*
 
-Este projeto realiza uma **análise exploratória completa (EDA)** a partie de um conjunto de dados fictícios de vendas, com o objetivo de identificar padrões, tendências e insights acionáveis que possam apoiar decisões de negócio. Os dados simulam operações de uma empresa distribuidora localizada em Moçambique e países vizinhos.
+Este repositório contém a **análise exploratória completa (EDA)** de um conjunto de dados fictícios de vendas, com o objetivo de compreender o comportamento comercial, identificar padrões, tendências e insights acionáveis e úteis para apoiar decisões estratégicas de negócio. Os dados simulam operações de uma empresa distribuidora localizada em Moçambique e países vizinhos.
 
 ---
 
 ## 🎯 Objetivos do Projecto
 
-- Compreender a distribuição das vendas por região, produto, vendedor e período.
-- Identificar os produtos mais vendidos e as regiões com maior volume de negócios.
-- Visualizar tendências ao longo do tempo e desempenho dos representantes de vendas.
+- Realizar a Análise Exploratória de Dados (EDA) usando Python e Jupyter.
+- Compreender a distribuição das vendas por produto, região, tempo e canal de pagamento.
+- Identificar produtos mais vendidos e o desempenho de vendedores.
+- Detectar possíveis outliers e verificar correlações entre variáveis.
+- Gerar visualizações informativas e guardar os gráficos para uso posterior.
 - Aplicar boas práticas de limpeza, análise e visualização de dados com Python.
 
 ---
@@ -21,8 +23,7 @@ Este projeto realiza uma **análise exploratória completa (EDA)** a partie de u
 |----------|-----|
 | **Python** | Linguagem principal |
 | **Pandas** | Manipulação e análise de dados |
-| **NumPy** | Operações numéricas |
-| **Matplotlib / Seaborn** | Visualização de dados |
+| **Matplotlib** | Visualização de dados |
 | **Jupyter Notebook** | Ambiente de desenvolvimento |
 | **CSV** | Formato do dataset |
 
@@ -42,26 +43,32 @@ Este projeto realiza uma **análise exploratória completa (EDA)** a partie de u
 
 ## 🧠 Metodologia
 
-1. **Carregamento dos dados** com `pandas`
-2. **Limpeza e validação**: verificação de valores nulos, tipos de dados
-3. **Análise descritiva**: médias, totais, distribuições
-4. **Agregações por categoria**: região, produto, vendedor
-5. **Visualizações**:
-   - Gráfico de barras: vendas por região
-   - Gráfico de linhas: evolução mensal das vendas
-   - Boxplot: distribuição de quantidades por produto
-   - Tabela dinâmica: vendas por vendedor e região
-6. **Extração de insights** com base nos resultados
+A análise foi realizada em Python com foco nas seguintes etapas:
+
+1. **Carregamento e inspeção dos dados**
+   - Verificação de tipos de dados
+   - Conversão de datas
+   - Detecção de valores nulos
+2. **Criação de variáveis auxiliares**
+   - Extração de mês e ano a partir da coluna de data
+3. **Visualizações com `matplotlib`**
+   - Barras, linhas, pizza e boxplots
+4. **Cálculo de estatísticas e correlações**
+   - Correlação entre `Quantidade`, `Preço Unitário` e `Total de Vendas`
+   - Análise de consistência de cálculos
+5. **Extração de insights** com base nos resultados
 
 ---
 
 ## 📈 Principais Insights
 
-✅ **Região com mais vendas:** Johannesburg (maior volume de TotalSales)  
-✅ **Produto mais vendido:** Smartphone (alta frequência e bom valor unitário)  
-✅ **Melhor vendedor:** Carla Nunes (maior faturação total)  
-✅ **Mês de pico:** Novembro (possível sazonalidade de fim de ano)  
-✅ **Método de pagamento predominante:** Multicaixa (reflete hábitos locais)
+- 💻 **Produto com maior faturação:** Laptop
+- 🌍 **Região com mais vendas:** Harare
+- 📅 **Mês com maior volume de vendas:** Setembro (9)
+- 🧑‍💼 **Melhor vendedor:** João Mota
+- 💳 **Método de pagamento mais usado:** Dinheiro
+- 📉 **Correlação forte:** entre `UnitPrice` e `TotalSales` (0.75)
+- ⚠️ **Outliers detectados:** em todas variáveis numéricas com boxplots
 
 > Estes insights podem orientar decisões como alocação de estoque, campanhas promocionais e incentivos a vendedores.
 
@@ -71,10 +78,14 @@ Este projeto realiza uma **análise exploratória completa (EDA)** a partie de u
 
 | Gráfico | Descrição |
 |-------|-----------|
-| ![Vendas por Região](plots/sales_by_region.png) | Distribuição do faturamento por região |
-| ![Tendência Mensal](plots/monthly_trend.png) | Evolução das vendas ao longo do tempo |
+| ![Vendas por Região](graficos/vendas_por_regiao.png) | Distribuição do vendas por região |
+| ![Vendas por Produto](graficos/vendas_por_produto.png) | Distribuição do vendas por produto |
+| ![Vendas por Vendedor](graficos/vendas_por_vendedor.png) | Distribuição do vendas por vendedor |
+| ![Produtos mais Vendidos](graficos/produtos_mais_vendidos_quantidade.png) | Distribuição do produtos mais vendidos  |
 
-> *(As imagens devem ser salvas na pasta `/plots` após execução do notebook)*
+| ![Tendência Mensal](graficos/vendas_por_mes.png) | Evolução das vendas ao longo do tempo |
+
+> *(Os gráficos estão disponíveis na pasta [`graficos/`](./graficos), em formato .png de alta qualidade)*
 
 ---
 
@@ -84,8 +95,11 @@ Este projeto realiza uma **análise exploratória completa (EDA)** a partie de u
 - Python 3.8 ou superior
 - Jupyter Notebook (ou VS Code/Google Colab)
 
-### Passos:
+## 📌 Autor
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/MMucelo/data-analysis-sales.git 
+**Moisés Mucelo**  
+📧 [moises.mucelo@gmail.com] 
+
+## 📄 Licença
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
